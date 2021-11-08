@@ -50,6 +50,7 @@ test:
 #
 production:
   <<: *default
-  database: tictactoe_api_production
-  username: tictactoe_api
-  password: <%= ENV['TICTACTOE_API_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['HOST'] %>
